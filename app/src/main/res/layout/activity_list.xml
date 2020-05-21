@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.rhkj.mutiplemodule.viewmodel.TestVM" />
+        <variable
+            name="user_list_activity"
+            type="com.rhkj.mutiplemodule.UserBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"
+            android:text="@={user_list_activity.name}"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/et_age"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="请输入年龄"-->
+<!--            android:text="@={user.age}"/>-->
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</layout>
